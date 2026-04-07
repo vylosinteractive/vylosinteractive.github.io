@@ -3,48 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vylos Interactive | High-Performance Android Development</title>
+    <title>Vylos Interactive | Next-Gen Android Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #0f172a; --text: #f8fafc; --accent: #38bdf8; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        header { border-left: 4px solid var(--accent); padding-left: 20px; margin-bottom: 50px; }
-        h1 { font-size: 2.5rem; letter-spacing: -1px; margin: 0; }
-        .tagline { color: var(--accent); font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .card { background: #1e293b; padding: 30px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #334155; }
-        .footer { margin-top: 60px; font-size: 0.85rem; color: #94a3b8; border-top: 1px solid #334155; padding-top: 20px; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root { --accent: #38bdf8; }
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; scroll-behavior: smooth; }
+        .heading { font-family: 'Orbitron', sans-serif; }
+        
+        /* Hero Background - Replace the URL with a high-res tech/gaming image */
+        .hero-bg {
+            background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(56, 189, 248, 0.1); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); transform: translateY(-5px); }
     </style>
 </head>
-<body>
-    <header>
-        <p class="tagline">Next-Gen Mobile Systems</p>
-        <h1>Vylos Interactive</h1>
-    </header>
+<body class="antialiased">
 
-    <section class="card">
-        <h2>Engineering Excellence</h2>
-        <p>Vylos Interactive specializes in high-performance Android solutions, leveraging the <strong>NDK, C++, and Vulkan API</strong> to build applications that push hardware to its limits.</p>
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center glass-card border-none bg-opacity-30">
+        <div class="text-2xl font-bold heading tracking-widest text-sky-400">VYLOS</div>
+        <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest text-slate-300">
+            <a href="#about" class="hover:text-sky-400 transition">About</a>
+            <a href="#solutions" class="hover:text-sky-400 transition">Solutions</a>
+            <a href="#infrastructure" class="hover:text-sky-400 transition">Infrastructure</a>
+            <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center text-center px-6 hero-bg">
+        <div class="max-w-5xl">
+            <h1 class="text-6xl md:text-8xl font-black heading mb-6 leading-tight uppercase tracking-tighter">
+                Waste into <span class="text-sky-400">Power</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Re-defining the limits of Android hardware through custom NDK kernels and low-level optimization.
+            </p>
+            <a href="#solutions" class="inline-block px-10 py-4 bg-sky-500 hover:bg-sky-400 text-black font-bold uppercase tracking-widest transition rounded-sm">
+                Discover Infrastructure
+            </a>
+        </div>
     </section>
 
-    <section class="card">
-        <h2>Our Portfolio</h2>
-        <ul>
-            <li><strong>Birdy:</strong> A high-performance utility leveraging TFLite and low-level optimization.</li>
-            <li><strong>Open Source:</strong> Maintaining custom UI libraries for the global developer community.</li>
-        </ul>
+    <section id="about" class="py-32 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold heading mb-8 text-sky-400">ENGINEERING EXCELLENCE</h2>
+                <p class="text-slate-400 leading-relaxed text-lg mb-6">
+                    Vylos Interactive is a Punjab-based mobile systems lab dedicated to high-performance Android development. We bridge the gap between high-level Java/Kotlin and low-level machine execution.
+                </p>
+                <p class="text-slate-400 leading-relaxed text-lg">
+                    Specializing in the Android NDK, C++, and Vulkan, we build utilities that require absolute precision and raw speed.
+                </p>
+            </div>
+            <div class="glass-card p-10 rounded-lg text-center">
+                <div class="text-5xl font-black text-sky-500 mb-2">10+</div>
+                <div class="text-slate-500 uppercase tracking-widest text-sm">Years of Architecture</div>
+            </div>
+        </div>
     </section>
 
-    <div class="card">
-        <h2>Developer Support</h2>
-        <p>For technical inquiries or application support:</p>
-        <p><strong>Email:</strong> support@vylosinteractive.com</p>
-        <p><a href="privacy.html">Legal & Privacy Policy</a></p>
-    </div>
+    <section id="solutions" class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold heading uppercase tracking-widest">Our Solutions</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="glass-card p-8 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 uppercase text-sky-400 tracking-wider">Birdy AI</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Mobile-first TFLite integration using custom prefab configurations for real-time inference.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 uppercase text-sky-400 tracking-wider">Vulkan Graphics</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Low-level GPU acceleration for complex UI components and high-refresh utilities.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <h3 class="text-xl font-bold mb-4 uppercase text-sky-400 tracking-wider">Kotlin Systems</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Idiomatic Jetpack Compose libraries built for scale and seamless developer integration.</p>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <p><strong>Registered Office:</strong> [Your Registered Address], Punjab, India.</p>
-        <p>&copy; 2026 Vylos Interactive. Verified Google Play Organization.</p>
+    <section id="infrastructure" class="py-32 px-6 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold heading mb-12">INFRASTRUCTURE STATUS: <span class="text-green-500">OPTIMIZED</span></h2>
+        <div id="contact" class="glass-card max-w-2xl mx-auto p-12 rounded-2xl">
+            <h3 class="text-2xl font-bold mb-6">Partner With Us</h3>
+            <p class="text-slate-400 mb-8">For technical collaboration or support:</p>
+            <p class="text-xl text-sky-400 font-bold mb-4">support@vylosinteractive.com</p>
+            <p class="text-sm text-slate-500">Registered Office: [Address], Punjab, India</p>
+        </div>
+    </section>
+
+    <footer class="p-10 text-center text-xs text-slate-700 uppercase tracking-widest">
+        © 2026 Vylos Interactive Software Lab | <a href="privacy.html" class="hover:text-slate-500">Privacy Policy</a>
     </footer>
+
 </body>
 </html>
